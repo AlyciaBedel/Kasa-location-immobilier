@@ -1,16 +1,11 @@
-import './home.scss'
-import Header from '../../components/header/Header'
-import Banner from '../../components/banner/Banner'
-import Gallery from '../../components/gallery/Gallery'
-import Footer from '../../components/footer/Footer'
+import React from 'react';
 
-export default function Home() {
+const ApartmentSheet = () => {
 	return (
-		<div className='home'>
-			<Header />
-			<Banner />
-			<Gallery />
-			<Footer />
+		<div>
+			Appartement
 		</div>
-	)
-}
+	);
+};
+
+export default ApartmentSheet;
