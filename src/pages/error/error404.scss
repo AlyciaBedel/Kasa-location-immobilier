@@ -1,9 +1,8 @@
 @import '../../sass/main.scss';
 
-main {
-    height: 100%;
+.error {
     @media screen and (min-width: $breakpoint-desktop) {
-        padding: 20px 0 60px 0;
+        padding-bottom:100px;
     }
 
     h1 {
@@ -19,7 +18,7 @@ main {
 
     p {
         width: 80%;
-        margin: 10px auto 0 auto;
+        margin: auto;
         color: $color-secondary;
         font-size: 30px;
         font-weight: 500;
