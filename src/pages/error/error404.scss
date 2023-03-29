@@ -2,17 +2,17 @@
 
 .error {
     @media screen and (min-width: $breakpoint-desktop) {
-        padding-bottom:100px;
+        padding-bottom:10rem;
     }
 
     h1 {
         color: $color-secondary;
-        font-size: 96px;
+        font-size: 9.6rem;
         font-weight: 700;
         text-align: center;
 
         @media screen and (min-width: $breakpoint-desktop) {
-            font-size: 288px;
+            font-size: 28.8rem;
         }
     }
 
@@ -20,21 +20,21 @@
         width: 80%;
         margin: auto;
         color: $color-secondary;
-        font-size: 30px;
+        font-size: 3rem;
         font-weight: 500;
         text-align: center;
 
         @media screen and (min-width: $breakpoint-desktop) {
             width: 100%;
-            font-size: 36px;
+            font-size: 3.6rem;
         }
     }
 
     .errorLink {
         display: block;
-        margin-top: 100px;
+        margin-top: 10rem;
         color: $color-secondary;
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: 500;
         text-align: center;
     }

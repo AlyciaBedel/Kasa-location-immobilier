@@ -2,9 +2,9 @@
 
 .apartmentGrid {
     background-color: $color-tertiary;
-    margin: 40px auto 0 auto;
-    border-radius: 25px;
-    padding: 50px;
+    margin: 4rem auto 0 auto;
+    border-radius: $border-radius;
+    padding: 5rem;
 
     .apartmentGrid-block {
         width: 100%;
@@ -12,8 +12,8 @@
         margin: auto;
         display: grid;
         grid-template-columns: 1fr;
-        column-gap: 30px;
-        row-gap: 30px;
+        column-gap: 3rem;
+        row-gap: 3rem;
         justify-content: center;
         align-items: center;
 
