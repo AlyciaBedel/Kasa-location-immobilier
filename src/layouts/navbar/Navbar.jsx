@@ -9,7 +9,7 @@ const Navbar = () => {
             <NavLink to='/'><img src={logo} alt="logo de l'entreprise kasa" /></NavLink>
             <nav>
             <NavLink to="/" rel="noreferrer" className="linkNavbar">Accueil</NavLink>
-            <NavLink to="/about" rel="noreferrer" className="linkNavbar">A Propos</NavLink>   
+            <NavLink to="/apropos" rel="noreferrer" className="linkNavbar">A Propos</NavLink>   
             </nav>
         </header>
     );

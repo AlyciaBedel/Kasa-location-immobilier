@@ -3,7 +3,10 @@
 main {
     width: 90%;
     margin: auto;
-    padding: 5rem 0;
-    // height: 70vh;
+    padding: 2rem 0 5rem 0;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 95%;
+    }
 }
   

@@ -14,8 +14,8 @@ function RoutesPath() {
                 <Routes>
                     <Route element={<Navigate replace to="/accueil" />} path="/" />
                     <Route path="/accueil" element={<Home />}/>
-                    <Route path="/apartment" element={<ApartmentSheet />}/>
-                    <Route path="/about" element={<About />}/>
+                    <Route path="/appartement" element={<ApartmentSheet />}/>
+                    <Route path="/apropos" element={<About />}/>
                     <Route path="*" element={<Error404 />}/>
                 </Routes>
             </Layouts>

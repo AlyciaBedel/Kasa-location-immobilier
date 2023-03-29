@@ -1,0 +1,10 @@
+@import '../../sass/main.scss';
+
+.about__container {
+    width: 95%;
+    margin: auto;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        width: 80%;
+    }
+}
