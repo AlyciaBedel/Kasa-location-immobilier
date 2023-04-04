@@ -1,5 +1,5 @@
-import Banner from '../../components/banner/Banner'
 import ApartmentGrid from '../../components/apartmentGrid/ApartmentGrid'
+import Banner from '../../layouts/banner/Banner'
 
 const Home = () => {
 	return (

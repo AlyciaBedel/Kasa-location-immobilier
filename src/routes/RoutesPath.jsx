@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Layouts from "../layouts/Layouts"
 import Home from "../pages/home/Home";
 import ApartmentSheet from "../pages/apartmentSheet/ApartmentSheet";
@@ -8,18 +8,18 @@ import Error404 from "../pages/error/Error404";
 
 
 function RoutesPath() {
-    return(
-        <HashRouter>
+    return (
+        <Router>
             <Layouts>
                 <Routes>
-                    <Route element={<Navigate replace to="/accueil" />} path="/" />
-                    <Route path="/accueil" element={<Home />}/>
-                    <Route path="/appartement" element={<ApartmentSheet />}/>
-                    <Route path="/apropos" element={<About />}/>
-                    <Route path="*" element={<Error404 />}/>
+                    <Route path="/" element={<Navigate to="/accueil" replace />} />
+                    <Route path="/accueil" element={<Home />} />
+                    <Route path="/appartement" element={<ApartmentSheet />} />
+                    <Route path="/apropos" element={<About />} />
+                    <Route path="*" element={<Error404 />} />
                 </Routes>
             </Layouts>
-        </HashRouter>
+        </Router>
     );
 }
 

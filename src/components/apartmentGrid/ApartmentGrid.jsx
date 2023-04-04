@@ -1,20 +1,27 @@
+import { useEffect, useState } from 'react';
 import React from 'react';
-import Apartment from '../apartmentCard/Apartment';
-import './apartmentGrid.scss'
+import './apartmentGrid.scss';
+import ApartmentCard from '../apartmentCard/Apartment';
 
 const ApartmentGrid = () => {
-    return (
-        <div className='apartmentGrid'>
-            <div className='apartmentGrid-block'>
-                <Apartment/>
-                <Apartment/>
-                <Apartment/>
-                <Apartment/>
-                <Apartment/>
-                <Apartment/>
-            </div>
+  const [apartments, setApartments] = useState([]);
+
+  useEffect(() => {
+    fetch('logements.json')
+      .then(res => res.json())
+      .then(res => setApartments(res))
+      .catch(console.error);
+  }, []);
+
+  return (
+    <div className='apartmentGrid'>
+        <div className='apartmentGrid-block'>
+            {apartments.map((apartment) => (
+            <ApartmentCard title={apartment.title} imageUrl={apartment.cover} id={apartment.id}/>
+            ))}
         </div>
-    );
+    </div>
+);
 };
 
 export default ApartmentGrid;

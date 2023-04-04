@@ -2,13 +2,17 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './apartment.scss'
 
-const Apartment = () => {
+const Apartment = (props) => {
+
     return (
-        <div className='apartment'>
-            <NavLink to='/appartement' className='apartment-block'>
-                    <h2>Titre de la location</h2>
+            <NavLink to='/appartement' state={{ apartmentId: props.id }} className='apartment__block'>
+                <div className='apartment__block-img'>
+                    <img src={props.imageUrl} alt="" />
+                </div>
+                <div className='apartment__block-title'>
+                    <h2>{props.title}</h2>
+                </div>
             </NavLink>
-        </div>
     );
 };
 
