@@ -3,6 +3,7 @@ import './apartmentSheet.scss'
 import ImageBanner from '../../components/imageBanner/ImageBanner';
 import { useLocation } from 'react-router-dom';
 import ApartmentHeader from '../../components/apartmentHeader/ApartmentHeader';
+import DescriptionPanel from '../../components/descriptionPanel/DescriptionPanel';
 
 const ApartmentSheet = () => {
 
@@ -29,10 +30,10 @@ const ApartmentSheet = () => {
 		 		<ImageBanner imageUrl={flat.cover}/>
 		 		<ApartmentHeader flat={flat}/>
 
-		 		{/* <div className='apartmentSheet__information'>
-		 			<DescriptionPanel/>
-		 			<DescriptionPanel/>
-		 		</div> */}
+		 		<div className='apartmentSheet__information'>
+		 			<DescriptionPanel title="Description" content={flat.description}/>
+		 			<DescriptionPanel title="Équipements" content={flat.equipments.map((eq) => (<ul><li>{eq}</li></ul>))}/>
+		 		</div> 
 		 </div>
 	);
 };

@@ -10,7 +10,7 @@ const ApartmentHeader = ({flat}) => {
 						<h1>{flat.title}</h1>
 						<h2>{flat.location}</h2>
 						<div className='apartmentSheet__containerTag'>
-							{flat.tags.map((tag) => (<span className='apartmentSheet__containerTag-tag'>{tag}</span>))}
+							{flat.tags.map((tag) => (<span className='apartmentSheet__containerTag-tag' key={tag}>{tag}</span>))}
 						</div>
 					</div>
 
@@ -26,7 +26,7 @@ const ApartmentHeader = ({flat}) => {
 						<div className='apartmentSheet__containerOwner-star'>
 
 							{[1,2,3,4,5].map((num) => (
-							<span className={flat.rating >= num ? "on" : " "}>★</span>
+							<span className={flat.rating >= num ? "on" : " "} key={num}>★</span>
 							))}
 						</div>
 
