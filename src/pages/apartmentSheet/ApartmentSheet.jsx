@@ -26,7 +26,6 @@ const ApartmentSheet = () => {
 
 	return (
 		 <div className='apartmentSheet'>
-			selected flat: {JSON.stringify(flat)}
 		 		<ImageBanner imageUrl={flat.cover}/>
 		 		<ApartmentHeader flat={flat}/>
 

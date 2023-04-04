@@ -2,10 +2,8 @@ import React from 'react';
 import './apartmentHeader.scss';
 
 
-const ApartmentHeader = (props) => {
+const ApartmentHeader = ({flat}) => {
 	
-	const flat = props.flat
-
     return (
         <div className='apartmentSheet__container'>
 					<div className='apartmentSheet__container-title'>
@@ -28,7 +26,7 @@ const ApartmentHeader = (props) => {
 						<div className='apartmentSheet__containerOwner-star'>
 
 							{[1,2,3,4,5].map((num) => (
-							<span className={props.flat.rating >= num ? "on" : ""}>★</span>
+							<span className={flat.rating >= num ? "on" : " "}>★</span>
 							))}
 						</div>
 
