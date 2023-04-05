@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './apartmentSheet.scss'
+import './apartmentSheet.scss';
 import ImageBanner from '../../components/imageBanner/ImageBanner';
 import { useLocation } from 'react-router-dom';
 import ApartmentHeader from '../../components/apartmentHeader/ApartmentHeader';
@@ -11,17 +11,18 @@ const ApartmentSheet = () => {
 	console.log(location);
 
 	const [flat, setFlat] = useState(null);
-	useEffect(fetchApartmentData, []);
-
-	function fetchApartmentData(){
-		fetch('logements.json')
-		.then (res => res.json())
-		.then ((flats) => {
-			const flat = flats.find((flat) => flat.id === location.state.apartmentId);
-			setFlat(flat);
-		})
-		.catch(console.error)
-	}
+	useEffect(() => {
+		function fetchApartmentData(){
+			fetch('logements.json')
+			.then (res => res.json())
+			.then ((flats) => {
+				const flat = flats.find((flat) => flat.id === location.state.apartmentId);
+				setFlat(flat);
+			})
+			.catch(console.error)
+		}
+		fetchApartmentData();
+	}, [location.state.apartmentId]);
 
 	if (!flat) return <div>Loading...</div>;
 
