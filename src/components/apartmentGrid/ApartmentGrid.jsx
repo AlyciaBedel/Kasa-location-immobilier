@@ -17,7 +17,7 @@ const ApartmentGrid = () => {
     <div className='apartmentGrid'>
         <div className='apartmentGrid-block'>
             {apartments.map((apartment) => (
-            <ApartmentCard title={apartment.title} imageUrl={apartment.cover} id={apartment.id}/>
+            <ApartmentCard title={apartment.title} imageUrl={apartment.cover} id={apartment.id} key={apartment.id}/>
             ))}
         </div>
     </div>

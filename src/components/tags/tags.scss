@@ -1,0 +1,19 @@
+@import '../../sass/main.scss';
+
+.apartmentSheet__containerTag {
+    display: flex;
+    column-gap: 1rem;
+
+    &-tag {
+        display: block;
+        margin-top: 1rem;
+        width: 115px;
+        height: 25px;
+        border-radius: $border-radius;
+        background-color: $color-secondary;
+        color: white;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        text-align: center;
+    }
+}

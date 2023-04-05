@@ -1,5 +1,6 @@
 import React from 'react';
 import './apartmentHeader.scss';
+import Tags from '../tags/Tags';
 
 
 const ApartmentHeader = ({flat}) => {
@@ -9,9 +10,7 @@ const ApartmentHeader = ({flat}) => {
 					<div className='apartmentSheet__container-title'>
 						<h1>{flat.title}</h1>
 						<h2>{flat.location}</h2>
-						<div className='apartmentSheet__containerTag'>
-							{flat.tags.map((tag) => (<span className='apartmentSheet__containerTag-tag' key={tag}>{tag}</span>))}
-						</div>
+						<Tags tags={flat.tags} />
 					</div>
 
 					<div className='apartmentSheet__containerOwner'>

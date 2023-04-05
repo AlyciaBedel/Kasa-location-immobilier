@@ -27,12 +27,12 @@ const ApartmentSheet = () => {
 
 	return (
 		 <div className='apartmentSheet'>
-		 		<ImageBanner imageUrl={flat.cover}/>
+		 		<ImageBanner pictures={flat.pictures}/>
 		 		<ApartmentHeader flat={flat}/>
 
 		 		<div className='apartmentSheet__information'>
 		 			<DescriptionPanel title="Description" content={flat.description}/>
-		 			<DescriptionPanel title="Équipements" content={flat.equipments.map((eq) => (<ul><li>{eq}</li></ul>))}/>
+		 			<DescriptionPanel title="Équipements" content={flat.equipments.map((eq, i) => (<ul key={i}><li>{eq}</li></ul>))}/>
 		 		</div> 
 		 </div>
 	);
