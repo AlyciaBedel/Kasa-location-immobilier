@@ -1,7 +1,9 @@
 import React from 'react';
 import './about.scss';
-import ImageBanner from '../../components/imageBanner/ImageBanner';
+import Banner from '../../layouts/banner/Banner';
 import Dropdown from '../../components/dropdown/Dropdown';
+import bannerAbout from '../../assets/img/about.jpg'
+
 
 const About = () => {
     const collapseContent = [
@@ -13,7 +15,7 @@ const About = () => {
 
     return (
         <>
-            <ImageBanner />
+            <Banner image={bannerAbout} titre=""/>
             <div className='about__container'>
                 {collapseContent.map((content, index) => (
                     <Dropdown key={index} title={index % 5 === 0 ? "Fiabilité" : index % 5 === 1 ? "Respect" : index % 5 === 2 ? "Service" : index % 5 === 3 ? "Sécurité" : ""} content={content} />

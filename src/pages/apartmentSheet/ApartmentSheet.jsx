@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import './apartmentSheet.scss';
-import ImageBanner from '../../components/imageBanner/ImageBanner';
 import { useLocation } from 'react-router-dom';
+import './apartmentSheet.scss';
 import ApartmentHeader from '../../components/apartmentHeader/ApartmentHeader';
 import Dropdown from '../../components/dropdown/Dropdown';
+import Carrousel from '../../components/carrousel/Carrousel';
 
 const ApartmentSheet = () => {
 
@@ -28,7 +28,7 @@ const ApartmentSheet = () => {
 
 	return (
 		 <div className='apartmentSheet'>
-		 		<ImageBanner pictures={flat.pictures}/>
+		 		<Carrousel pictures={flat.pictures}/>
 		 		<ApartmentHeader flat={flat}/>
 
 		 		<div className='apartmentSheet__information'>

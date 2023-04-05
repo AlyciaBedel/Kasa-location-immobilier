@@ -1,18 +1,17 @@
 import React from 'react';
 import './banner.scss'
-import backgroundImg from '../../assets/img/home.jpg'
 
 
-const Banner = () => {
+const Banner = ({image, texte}) => {
     return (
         <div className='banner'>
         <div className='banner__image'>
           <div className='banner__gradient'></div>
-          <img src={backgroundImg} alt='' />
+          <img src={image} alt='Bannière de la page' />
         </div>
       
         <div className='banner__text'>
-          <h1>Chez vous, partout et ailleurs</h1>
+          <h1>{texte}</h1>
         </div>
       </div>      
     );
