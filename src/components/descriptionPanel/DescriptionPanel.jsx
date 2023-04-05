@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './descriptionPanel.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 const DescriptionPanel = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +14,7 @@ const DescriptionPanel = (props) => {
     <div className="panel__description">
       <p className="panel__description-header" onClick={toggleContent}>
         <span>{props.title}</span>
-        <i className={`fas fa-chevron-${isOpen ? 'down' : 'up'}`}></i>
+        <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
       </p>
 
       {isOpen && (

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
 import './apartmentGrid.scss';
-import ApartmentCard from '../apartmentCard/Apartment';
+import ApartmentCard from '../apartmentCard/ApartmentCard';
 
 const ApartmentGrid = () => {
   const [apartments, setApartments] = useState([]);

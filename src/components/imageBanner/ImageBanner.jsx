@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './imageBanner.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import backgroundImg from '../../assets/img/aboutBanner.jpg'
 
 const ImageBanner = (props) => {
-    // const imageUrl = props.imageUrl ? props.imageUrl : {backgroundImg};
 
     const pictures = props.pictures; 
 
@@ -42,8 +43,8 @@ const ImageBanner = (props) => {
             </div>
             {arePicturesAvailable() && (
                 <>
-                    <button className='btn btn-next' onClick={moveToNext}><i className='fas fa-chevron-right'></i></button>
-                    <button className='btn btn-previous' onClick={moveToPrevious}><i className='fas fa-chevron-left'></i></button>
+                    <button className='btn btn-next' onClick={moveToNext}><FontAwesomeIcon icon={faChevronRight} /></button>
+                    <button className='btn btn-previous' onClick={moveToPrevious}><FontAwesomeIcon icon={faChevronLeft} /></button>
                 </>
             )}
 		</div>

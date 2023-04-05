@@ -19,7 +19,7 @@ const ApartmentHeader = ({flat}) => {
 						<div className='apartmentSheet__containerOwner-profil'>
 							<h3>{flat.host.name}</h3>
 							<div className='apartmentSheet__containerOwner-profil--img'>
-								<img src={flat.host.picture} alt="" />
+								<img src={flat.host.picture} alt={`Profil de ${flat.host.name}`} />
 							</div>
 						</div>
 
