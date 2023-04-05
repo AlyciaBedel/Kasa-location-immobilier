@@ -5,6 +5,9 @@ import Score from '../score/Score';
 
 
 const ApartmentHeader = ({flat}) => {
+
+	const name = flat.host.name;
+	const [firstName, lastName] = name.split(' ');
 	
     return (
         <div className='apartmentSheet__container'>
@@ -17,7 +20,12 @@ const ApartmentHeader = ({flat}) => {
 					<div className='apartmentSheet__containerOwner'>
 
 						<div className='apartmentSheet__containerOwner-profil'>
-							<h3>{flat.host.name}</h3>
+								<h3>
+									<span>{firstName}</span> 
+									<br></br>
+									<span>{lastName}</span>
+								</h3>
+
 							<div className='apartmentSheet__containerOwner-profil--img'>
 								<img src={flat.host.picture} alt={`Profil de ${flat.host.name}`} />
 							</div>

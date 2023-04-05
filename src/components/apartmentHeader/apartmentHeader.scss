@@ -36,30 +36,31 @@
     &__containerOwner {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
         margin-top: 2rem;
 
         @media screen and (min-width: $breakpoint-desktop) {
             flex-direction: column;
-            justify-content: flex-end;
             align-items: flex-end;
             margin-top: 0;
         }
 
         &-profil {
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            column-gap: 5rem;
             order: 2;
+            column-gap: 2rem;
 
             @media screen and (min-width: $breakpoint-desktop) {
-                column-gap: 5rem;
                 order: 1;
+                column-gap: 2rem;
             }
 
+
             h3 {
+                display: block;
                 width: 20%;
                 font-size: 1.8rem;
                 font-weight: 500;
@@ -68,8 +69,9 @@
             }
 
             &--img {
+                width: 80%;
                 background-color: grey;
-                width: 64px;
+                max-width: 64px;
                 height: 64px;
                 border-radius: 50%;
 

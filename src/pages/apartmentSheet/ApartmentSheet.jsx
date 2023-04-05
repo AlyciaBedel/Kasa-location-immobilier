@@ -3,7 +3,7 @@ import './apartmentSheet.scss';
 import ImageBanner from '../../components/imageBanner/ImageBanner';
 import { useLocation } from 'react-router-dom';
 import ApartmentHeader from '../../components/apartmentHeader/ApartmentHeader';
-import DescriptionPanel from '../../components/descriptionPanel/DescriptionPanel';
+import Dropdown from '../../components/dropdown/Dropdown';
 
 const ApartmentSheet = () => {
 
@@ -32,8 +32,8 @@ const ApartmentSheet = () => {
 		 		<ApartmentHeader flat={flat}/>
 
 		 		<div className='apartmentSheet__information'>
-		 			<DescriptionPanel title="Description" content={flat.description}/>
-		 			<DescriptionPanel title="Équipements" content={flat.equipments.map((eq, i) => (<ul key={i}><li>{eq}</li></ul>))}/>
+		 			<Dropdown title="Description" content={flat.description}/>
+		 			<Dropdown title="Équipements" content={flat.equipments.map((eq, i) => (<ul key={i}><li>{eq}</li></ul>))}/>
 		 		</div> 
 		 </div>
 	);

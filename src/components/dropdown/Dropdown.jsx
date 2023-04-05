@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './descriptionPanel.scss';
+import './dropdown.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-const DescriptionPanel = (props) => {
+const Dropdown = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleContent = () => {
@@ -26,5 +26,5 @@ const DescriptionPanel = (props) => {
   );
 };
 
-export default DescriptionPanel;
+export default Dropdown;
 

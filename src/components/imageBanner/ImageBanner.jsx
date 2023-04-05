@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './imageBanner.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import backgroundImg from '../../assets/img/aboutBanner.jpg'
+import backgroundImg from '../../assets/img/about.jpg'
 
 const ImageBanner = (props) => {
 

@@ -4,10 +4,15 @@ header {
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: 25rem 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
     justify-content: center;
     align-items: center;
     padding: 4rem 0;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        grid-template-columns: 25rem 1fr;
+    }
 
     img {
         width: 100%;
@@ -23,7 +28,11 @@ header {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        column-gap: 5.5rem;
+        column-gap: 2rem;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            column-gap: 5.5rem;
+        }
 
         .linkNavbar {
             text-decoration: none;
@@ -35,7 +44,7 @@ header {
             @media screen and (min-width: $breakpoint-desktop) {
                 font-size: 2.4rem;
             }
-
+            
             &:hover {
                 text-decoration: underline;
             }
