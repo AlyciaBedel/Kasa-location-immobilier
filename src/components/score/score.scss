@@ -1,0 +1,29 @@
+@import '../../sass/main.scss';
+
+.apartmentSheet__containerOwner-star {
+    display: flex;
+    margin-top: 0;
+    column-gap: 0.5rem;
+    order: 1;
+    color: lightgrey;
+
+    .on {
+        color: $color-secondary;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        margin-top: 2.5rem;
+        order: 2;
+    }
+
+    span {
+        width: 20px;
+        height: 20px;
+        
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

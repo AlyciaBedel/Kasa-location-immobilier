@@ -1,6 +1,7 @@
 import React from 'react';
 import './apartmentHeader.scss';
 import Tags from '../tags/Tags';
+import Score from '../score/Score';
 
 
 const ApartmentHeader = ({flat}) => {
@@ -22,15 +23,9 @@ const ApartmentHeader = ({flat}) => {
 							</div>
 						</div>
 
-						<div className='apartmentSheet__containerOwner-star'>
-
-							{[1,2,3,4,5].map((num) => (
-							<span className={flat.rating >= num ? "on" : " "} key={num}>★</span>
-							))}
-						</div>
+						<Score rating={flat.rating} />
 
 					</div>
-
 				</div>
     );
 };
