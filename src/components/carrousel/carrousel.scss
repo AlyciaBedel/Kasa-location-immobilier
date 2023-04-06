@@ -10,10 +10,14 @@
         width: 8rem;
         background-color: transparent;
         color: $color-primary;
-        font-size: 8rem;
+        font-size: 3rem;
         border: none;
         outline: none;
         cursor: pointer;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            font-size: 8rem;
+        }
 
         &:active, &:focus {
             outline: none;
