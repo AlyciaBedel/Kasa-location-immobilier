@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './dropdown.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const Dropdown = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,14 +17,11 @@ const Dropdown = (props) => {
         <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
       </p>
 
-      {isOpen && (
-        <div className="panel__description-content">
-          {props.content}
-        </div>
-      )}
+      <div className={`panel__description-content ${isOpen ? 'open' : 'close'}`}>
+        {props.content}
+      </div>
     </div>
   );
 };
 
 export default Dropdown;
-
