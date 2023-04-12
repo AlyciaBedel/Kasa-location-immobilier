@@ -30,7 +30,7 @@ const Carrousel = (props) => {
             ))}  
             </div>
             {pictures.length > 1 && <button className='btn btn-previous' onClick={moveToPrevious}><FontAwesomeIcon icon={faChevronLeft} /></button>}
-            <span className='slide-counter'>{currentPicture + 1} / {pictures.length}</span>
+            {pictures.length > 1 && <span className='slide-counter'>{currentPicture + 1} / {pictures.length}</span>}
             {pictures.length > 1 && <button className='btn btn-next' onClick={moveToNext}><FontAwesomeIcon icon={faChevronRight} /></button>}
         </div>
     );
