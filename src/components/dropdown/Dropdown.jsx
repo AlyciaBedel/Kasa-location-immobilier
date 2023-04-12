@@ -14,7 +14,10 @@ const Dropdown = (props) => {
     <div className="panel__description">
       <p className="panel__description-header" onClick={toggleContent}>
         <span>{props.title}</span>
-        <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
+        <FontAwesomeIcon 
+          icon={isOpen ? faChevronDown : faChevronUp} 
+          className={`chevron ${isOpen ? 'open' : 'close'}`}
+        />
       </p>
 
       <div className={`panel__description-content ${isOpen ? 'open' : 'close'}`}>
