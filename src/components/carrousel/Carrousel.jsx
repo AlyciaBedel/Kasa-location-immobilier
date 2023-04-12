@@ -26,12 +26,12 @@ const Carrousel = (props) => {
         <div className='banner__img'>
             <div className='img__container'>
             {pictures.map((pic, i)=>(
-            <img key={pic} src={pic} alt={`Image ${i + 1}: Photo de l'appartement`} className={getClassName(i)}></img>
+            <img key={pic} src={pic} alt={`${i + 1}: de l'appartement`} className={getClassName(i)}></img>
             ))}  
             </div>
-            <button className='btn btn-previous' onClick={moveToPrevious}><FontAwesomeIcon icon={faChevronLeft} /></button>
+            {pictures.length > 1 && <button className='btn btn-previous' onClick={moveToPrevious}><FontAwesomeIcon icon={faChevronLeft} /></button>}
             <span className='slide-counter'>{currentPicture + 1} / {pictures.length}</span>
-            <button className='btn btn-next' onClick={moveToNext}><FontAwesomeIcon icon={faChevronRight} /></button>
+            {pictures.length > 1 && <button className='btn btn-next' onClick={moveToNext}><FontAwesomeIcon icon={faChevronRight} /></button>}
         </div>
     );
 
