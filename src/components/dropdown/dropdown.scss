@@ -47,12 +47,13 @@
       }
   
       &.open {
-        animation: dropdown-open 0.5s ease-in-out forwards;
+        animation: dropdown-open 0.5s ease-out forwards;
       }
   
       &.close {
-        animation: dropdown-close 0.5s ease-in-out forwards;
+        animation: dropdown-close 0.5s ease-in forwards;
       }
+
     }
   
     @keyframes dropdown-open {
