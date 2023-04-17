@@ -23,7 +23,7 @@
       font-size: 2rem;
       transition: transform 0.5s ease-in-out;
     }
-    
+
     &.animating .chevron {
       transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
       opacity: 0;
@@ -41,7 +41,8 @@
     height: 0;
     visibility: hidden;
     opacity: 0;
-    transition: height 0.5s ease-in-out, visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out, visibility 0.5s ease-in-out,
+      opacity 0.5s ease-in-out;
 
     &.open {
       height: auto;
@@ -64,4 +65,3 @@
     padding: 3rem;
   }
 }
-

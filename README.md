@@ -35,7 +35,7 @@ Démarrer le projet React et développer l’ensemble de l’application, les co
 
 ## Installation du projet
 
-`React` et `npm` doivent être installés localement sur votre machine.\
+`React` et `npm` doivent être installés localement sur votre machine.
 
 Pour installer et lancer le projet sur votre machine :
 

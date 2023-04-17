@@ -1,12 +1,11 @@
 @import '../sass/main.scss';
 
 main {
-    width: 90%;
-    margin: auto;
-    padding: 2rem 0 5rem 0;
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0 5rem 0;
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        width: 95%;
-    }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 95%;
+  }
 }
-  

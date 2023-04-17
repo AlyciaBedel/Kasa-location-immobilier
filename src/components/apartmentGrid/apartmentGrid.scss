@@ -1,28 +1,28 @@
 @import '../../sass/main.scss';
 
 .apartmentGrid {
-    background-color: $color-tertiary;
-    margin: 4rem auto 0 auto;
-    border-radius: $border-radius;
-    padding: 5rem 2.5rem;
+  background-color: $color-tertiary;
+  margin: 4rem auto 0 auto;
+  border-radius: $border-radius;
+  padding: 5rem 2.5rem;
 
-    .apartmentGrid-block {
-        width: 100%;
-        max-width: 1440px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        column-gap: 3rem;
-        row-gap: 3rem;
-        justify-content: center;
-        align-items: center;
+  .apartmentGrid-block {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 3rem;
+    row-gap: 3rem;
+    justify-content: center;
+    align-items: center;
 
-        @media screen and (min-width: $breakpoint-tablette) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        
-        @media screen and (min-width: $breakpoint-desktop) {
-            grid-template-columns: repeat(3, 1fr);
-        }
+    @media screen and (min-width: $breakpoint-tablette) {
+      grid-template-columns: repeat(2, 1fr);
     }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }

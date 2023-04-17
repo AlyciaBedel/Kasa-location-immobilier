@@ -1,40 +1,41 @@
-import React, { useState, useRef, useLayoutEffect } from 'react';
-import './dropdown.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useRef, useLayoutEffect } from 'react'
+import './dropdown.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 const Dropdown = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const contentRef = useRef(null);
-  const [contentHeight, setContentHeight] = useState(0);
+  const [isOpen, setIsOpen] = useState(false)
+  const [isAnimating, setIsAnimating] = useState(false)
+  const contentRef = useRef(null)
+  const [contentHeight, setContentHeight] = useState(0)
 
   useLayoutEffect(() => {
-    const content = contentRef.current;
-    const height = content.scrollHeight ;
-    setContentHeight(height);
-    content.style.maxHeight = isOpen ? `${height}px` : '0px';
-  }, [isOpen]);
-  
+    const content = contentRef.current
+    const height = content.scrollHeight
+    setContentHeight(height)
+    content.style.maxHeight = isOpen ? `${height}px` : '0px'
+  }, [isOpen])
 
   const toggleContent = () => {
     if (!isAnimating) {
-      setIsAnimating(true);
-      setIsOpen(!isOpen);
+      setIsAnimating(true)
+      setIsOpen(!isOpen)
       setTimeout(() => {
-        setIsAnimating(false);
-      }, 500);
+        setIsAnimating(false)
+      }, 500)
     }
-  };
+  }
 
-  const chevronClass = `chevron ${isOpen ? 'open' : 'close'} ${isAnimating ? 'animating' : ''}`;
+  const chevronClass = `chevron ${isOpen ? 'open' : 'close'} ${
+    isAnimating ? 'animating' : ''
+  }`
 
   return (
     <div className="panel__description">
       <div className="panel__description-header" onClick={toggleContent}>
         <span>{props.title}</span>
-        <FontAwesomeIcon 
-          icon={isOpen ? faChevronUp : faChevronDown} 
+        <FontAwesomeIcon
+          icon={isOpen ? faChevronUp : faChevronDown}
           className={chevronClass}
           style={{ transform: `rotate(${isOpen ? '180deg' : '0deg'})` }}
         />
@@ -48,7 +49,7 @@ const Dropdown = (props) => {
         <div className="panel__description-text">{props.content}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Dropdown;
+export default Dropdown

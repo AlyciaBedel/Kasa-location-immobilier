@@ -1,57 +1,57 @@
 @import '../../sass/main.scss';
 
 header {
-    width: 90%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 12rem 1fr;
-    column-gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 0;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  column-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    grid-template-columns: 25rem 1fr;
+  }
+
+  img {
+    width: 100%;
+    max-width: 145px;
+    height: 100%;
 
     @media screen and (min-width: $breakpoint-desktop) {
-        grid-template-columns: 25rem 1fr;
+      max-width: 210px;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 2rem;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      column-gap: 5.5rem;
     }
 
-    img {
-        width: 100%;
-        max-width: 145px;
-        height: 100%;
+    .linkNavbar {
+      text-decoration: none;
+      color: $color-secondary;
+      font-size: 1.6rem;
+      font-weight: 400;
+      cursor: pointer;
 
-        @media screen and (min-width: $breakpoint-desktop) {
-            max-width: 210px;
-        }
+      @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 2.4rem;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        text-decoration: underline;
+      }
     }
-
-    nav {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        column-gap: 2rem;
-
-        @media screen and (min-width: $breakpoint-desktop) {
-            column-gap: 5.5rem;
-        }
-
-        .linkNavbar {
-            text-decoration: none;
-            color: $color-secondary;
-            font-size: 1.6rem;
-            font-weight: 400;
-            cursor: pointer;
-
-            @media screen and (min-width: $breakpoint-desktop) {
-                font-size: 2.4rem;
-            }
-            
-            &:hover {
-                text-decoration: underline;
-            }
-
-            &:active {
-                text-decoration: underline;
-            }
-        }
-    }
+  }
 }
