@@ -6,6 +6,7 @@ import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons
 const Carrousel = (props) => {
 
     const pictures = props.pictures; 
+    const apartmentName = props.title || 'Image';
 
     const [currentPicture, setCurrentPicture] = useState(0);
 
@@ -26,7 +27,7 @@ const Carrousel = (props) => {
         <div className='banner__img'>
             <div className='img__container'>
             {pictures.map((pic, i)=>(
-            <img key={pic} src={pic} alt={`${i + 1}: de l'appartement`} className={getClassName(i)}></img>
+            <img key={pic} src={pic} alt={apartmentName} className={getClassName(i)} />
             ))}  
             </div>
             {pictures.length > 1 && <button className='btn btn-previous' onClick={moveToPrevious}><FontAwesomeIcon icon={faChevronLeft} /></button>}
@@ -34,8 +35,6 @@ const Carrousel = (props) => {
             {pictures.length > 1 && <button className='btn btn-next' onClick={moveToNext}><FontAwesomeIcon icon={faChevronRight} /></button>}
         </div>
     );
-
-
 };
 
 export default Carrousel;
