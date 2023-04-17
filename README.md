@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Projet 7 : Kasa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Septième projet du parcours "Développeur web" chez OpenClassroom. L'objectif est de créer une application de location immobilière avec React.
 
-## Available Scripts
+<img src="https://user-images.githubusercontent.com/98737248/232500465-0d743860-a4cd-4af0-bcf9-bc2cf2f698b3.svg" style="height:35px;"> [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
 
-In the project directory, you can run:
+![217819401-d55df576-8b36-4faf-9951-6ac00f07cf95](https://user-images.githubusercontent.com/98737248/232498896-5657dce3-82a1-49c3-a50c-fd428f3747ac.png)
 
-### `npm start`
+## Qui est Kasa ?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans maintenant. Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de la location d’appartements entre particuliers en France.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demande du client
+Le site de Kasa a été codé il y a maintenant plus de 10 ans en ASP.NET avec un code legacy important. Ils ont lancé une refonte totale pour passer à une stack complète en JavaScript avec NodeJS côté back-end, et React côté front-end. 
 
-### `npm test`
+## Objectifs
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Démarrer le projet React et développer l’ensemble de l’application, les composants React, les routes React Router, en suivant les maquettes, le site doit être responsives. 
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- Sass
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contraintes fonctionnelles
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Pour le défilement des photos dans la galerie (composant Gallery) :
+  - Si l'utilisateur se trouve à la première image et qu'il clique sur "Image précédente", la galerie affiche la dernière image. 
+  - Inversement, quand l'image affichée est la dernière de la galerie, si l'utilisateur clique sur "Image suivante", la galerie affiche la première image. 
+  - S'il n'y a qu'une seule image, les boutons "Suivant" et "Précédent" n'apparaissent pas.
+- La galerie doit toujours rester de la même hauteur, celle indiquée sur la maquette. Les images seront donc coupées et centrées dans le cadre de l’image.
+- Collapse : Par défaut, les Collapses sont fermés à l'initialisation de la page. 
+- Si le Collapse est ouvert, le clic de l'utilisateur permet de le fermer.
+  - Inversement, si le Collapse est fermé, un clic permet de l'ouvrir.
 
-### `npm run eject`
+## Installation du projet
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`React` et `npm` doivent être installés localement sur votre machine.\
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Pour installer et lancer le projet sur votre machine :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```terminal
+npm install
+npm start
+```
