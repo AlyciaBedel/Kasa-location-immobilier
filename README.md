@@ -4,7 +4,7 @@ Septième projet du parcours "Développeur web" chez OpenClassroom. L'objectif e
 
 <img src="https://user-images.githubusercontent.com/98737248/232500465-0d743860-a4cd-4af0-bcf9-bc2cf2f698b3.svg" style="height:35px;"> [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
 
-![217819401-d55df576-8b36-4faf-9951-6ac00f07cf95](https://user-images.githubusercontent.com/98737248/232498896-5657dce3-82a1-49c3-a50c-fd428f3747ac.png)
+![217819401-d55df576-8b36-4faf-9951-6ac00f07cf95](https://user-images.githubusercontent.com/98737248/232501239-b7af92ba-b05e-4766-a726-7d12b9a2d8ba.png)
 
 ## Qui est Kasa ?
 
