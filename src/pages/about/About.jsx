@@ -27,21 +27,15 @@ const aboutData = [
   },
 ]
 
-const About = () => {
-  return (
-    <>
-      <Banner image={bannerAbout} />
-      <div className="about__container">
-        {aboutData.map((data) => (
-          <Dropdown
-            key={data.title}
-            title={data.title}
-            content={data.content}
-          />
-        ))}
-      </div>
-    </>
-  )
-}
+const About = () => (
+  <>
+    <Banner image={bannerAbout} />
+    <div className="about__container">
+      {aboutData.map((data) => (
+        <Dropdown key={data.title} title={data.title} content={data.content} />
+      ))}
+    </div>
+  </>
+)
 
 export default About

@@ -1,8 +1,0 @@
-{
-  "extends": ["react-app", "react-app/jest", "airbnb-base", "prettier"],
-  "plugins": ["prettier"],
-  "rules": {
-    "semi": "warn",
-    "prettier/prettier": "error"
-  }
-}
