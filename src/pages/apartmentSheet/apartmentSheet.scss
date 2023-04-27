@@ -4,7 +4,6 @@
   &__information {
     display: flex;
     flex-direction: column;
-    row-gap: 3rem;
 
     @media screen and (min-width: $breakpoint-desktop) {
       flex-direction: row;

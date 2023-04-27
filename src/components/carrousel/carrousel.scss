@@ -71,4 +71,12 @@
       border-radius: $border-radius;
     }
   }
+
+  .slide-counter {
+    display: none;
+  
+    @media screen and (min-width: $breakpoint-desktop) {
+      display: block;
+    }
+  }
 }

@@ -12,6 +12,7 @@ header {
 
   @media screen and (min-width: $breakpoint-desktop) {
     grid-template-columns: 25rem 1fr;
+    column-gap: 2rem;
   }
 
   img {
@@ -31,13 +32,13 @@ header {
     column-gap: 2rem;
 
     @media screen and (min-width: $breakpoint-desktop) {
-      column-gap: 5.5rem;
+      column-gap: 4rem;
     }
 
     .linkNavbar {
       text-decoration: none;
       color: $color-secondary;
-      font-size: 1.6rem;
+      font-size: 2.0rem;
       font-weight: 400;
       cursor: pointer;
 
@@ -45,12 +46,10 @@ header {
         font-size: 2.4rem;
       }
 
-      &:hover {
-        text-decoration: underline;
-      }
-
-      &:active {
-        text-decoration: underline;
+      &:hover, &:active,
+      &:focus {
+        border-bottom: 2px solid; 
+        outline: none;
       }
     }
   }
