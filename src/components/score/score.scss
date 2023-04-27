@@ -7,14 +7,13 @@
   order: 1;
   color: lightgrey;
 
+  @media screen and (min-width: $breakpoint-mobile) {
+    column-gap: 0.5rem;
+  }
   @media screen and (min-width: $breakpoint-desktop) {
     column-gap: 0.5rem;
   }
   
-  @media screen and (min-width: $breakpoint-mobile) {
-    column-gap: 0.5rem;
-  }
-
   .on {
     color: $color-secondary;
   }
@@ -28,14 +27,14 @@
     width: 15px;
     height: 15px;
 
-    @media screen and (min-width: $breakpoint-desktop) {
-      width: 30px;
-      height: 30px;
-    }
-
     @media screen and (min-width: $breakpoint-mobile) {
       width: 20px;
       height: 20px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      width: 30px;
+      height: 30px;
     }
   }
 }
