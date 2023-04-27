@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams, useNavigate } from 'react-router-dom';
 import './apartmentSheet.scss';
 import ApartmentHeader from '../../components/apartmentHeader/ApartmentHeader';
 import Dropdown from '../../components/dropdown/Dropdown';
@@ -8,6 +8,7 @@ import Carrousel from '../../components/carrousel/Carrousel';
 const ApartmentSheet = () => {
   const location = useLocation();
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [flat, setFlat] = useState(null);
   useEffect(() => {
@@ -16,12 +17,16 @@ const ApartmentSheet = () => {
         .then((res) => res.json())
         .then((flats) => {
           const flat = flats.find((flat) => flat.id === id);
-          setFlat(flat);
+          if (!flat) {
+            navigate('/404');
+          } else {
+            setFlat(flat);
+          }
         })
         .catch(console.error);
     }
     fetchApartmentData();
-  }, [id]);
+  }, [id, navigate]);
 
   if (!flat) return <div>Loading...</div>;
 
