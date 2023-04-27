@@ -8,11 +8,17 @@ header {
   column-gap: 0.8rem;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
+  padding: 3rem 0 1rem 0;
+
+  @media screen and (min-width: $breakpoint-tablette) {
+      column-gap: 2rem;
+      padding: 4rem 0;
+  }
 
   @media screen and (min-width: $breakpoint-desktop) {
     grid-template-columns: 25rem 1fr;
     column-gap: 2rem;
+    padding: 4rem 0;
   }
 
   img {
@@ -22,6 +28,10 @@ header {
 
     @media screen and (min-width: $breakpoint-mobile) {
       max-width: 145px;
+    }
+
+    @media screen and (min-width: $breakpoint-tablette) {
+      max-width: 210px;
     }
 
     @media screen and (min-width: $breakpoint-desktop) {
