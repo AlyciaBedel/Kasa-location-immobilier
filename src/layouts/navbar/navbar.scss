@@ -4,8 +4,8 @@ header {
   width: 90%;
   margin: auto;
   display: grid;
-  grid-template-columns: 12rem 1fr;
-  column-gap: 2rem;
+  grid-template-columns: 10rem 1fr;
+  column-gap: 0.8rem;
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
@@ -15,13 +15,22 @@ header {
     column-gap: 2rem;
   }
 
+  @media screen and (min-width: $breakpoint-mobile) {
+    column-gap: 2rem;
+    grid-template-columns: 12rem 1fr;
+  }
+
   img {
     width: 100%;
-    max-width: 145px;
+    max-width: 90px;
     height: 100%;
 
     @media screen and (min-width: $breakpoint-desktop) {
       max-width: 210px;
+    }
+
+    @media screen and (min-width: $breakpoint-mobile) {
+      max-width: 145px;
     }
   }
 
@@ -38,12 +47,16 @@ header {
     .linkNavbar {
       text-decoration: none;
       color: $color-secondary;
-      font-size: 2.0rem;
+      font-size: 1.6rem;
       font-weight: 400;
       cursor: pointer;
 
       @media screen and (min-width: $breakpoint-desktop) {
         font-size: 2.4rem;
+      }
+
+      @media screen and (min-width: $breakpoint-mobile) {
+        font-size: 2.0rem;
       }
 
       &:hover, &:active,
