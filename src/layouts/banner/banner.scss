@@ -20,9 +20,11 @@
       color: $color-primary;
       font-size: 2.4rem;
       font-weight: 500;
+      text-align: left;
 
       @media screen and (min-width: $breakpoint-desktop) {
-          font-size: 4.8rem;
+        font-size: 3.8rem;
+        text-align: center;
       }
     }
   }
@@ -33,7 +35,7 @@
     border-radius: $border-radius;
 
     @media screen and (min-width: $breakpoint-desktop) {
-        height: 225px;
+      height: 225px;
     }
 
     img {
@@ -43,13 +45,6 @@
       object-fit: cover;
       border-radius: $border-radius;
       filter: brightness(50%);
-    }
-  }
-
-  .slide-counter{
-    display: none;
-    @media screen and (min-width: $breakpoint-desktop) {
-        display: block;
     }
   }
 }
