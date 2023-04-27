@@ -1,31 +1,29 @@
-import { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
-import './apartmentSheet.scss'
-import ApartmentHeader from '../../components/apartmentHeader/ApartmentHeader'
-import Dropdown from '../../components/dropdown/Dropdown'
-import Carrousel from '../../components/carrousel/Carrousel'
+import { useEffect, useState } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
+import './apartmentSheet.scss';
+import ApartmentHeader from '../../components/apartmentHeader/ApartmentHeader';
+import Dropdown from '../../components/dropdown/Dropdown';
+import Carrousel from '../../components/carrousel/Carrousel';
 
 const ApartmentSheet = () => {
-  const location = useLocation()
-  console.log(location)
+  const location = useLocation();
+  const { id } = useParams();
 
-  const [flat, setFlat] = useState(null)
+  const [flat, setFlat] = useState(null);
   useEffect(() => {
     function fetchApartmentData() {
-      fetch('logements.json')
+      fetch('../../logements.json')
         .then((res) => res.json())
         .then((flats) => {
-          const flat = flats.find(
-            (flat) => flat.id === location.state.apartmentId
-          )
-          setFlat(flat)
+          const flat = flats.find((flat) => flat.id === id);
+          setFlat(flat);
         })
-        .catch(console.error)
+        .catch(console.error);
     }
-    fetchApartmentData()
-  }, [location.state.apartmentId])
+    fetchApartmentData();
+  }, [id]);
 
-  if (!flat) return <div>Loading...</div>
+  if (!flat) return <div>Loading...</div>;
 
   return (
     <div className="apartmentSheet">
@@ -44,7 +42,7 @@ const ApartmentSheet = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ApartmentSheet
+export default ApartmentSheet;

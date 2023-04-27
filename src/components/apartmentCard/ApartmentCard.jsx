@@ -5,7 +5,7 @@ import './apartmentCard.scss'
 const Apartment = (props) => {
   return (
     <NavLink
-      to="/appartement"
+      to={`/appartement/${props.id}`}
       state={{ apartmentId: props.id }}
       className="apartment__block"
     >
