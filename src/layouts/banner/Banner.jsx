@@ -1,10 +1,14 @@
 import React from 'react'
 import './banner.scss'
 
-const Banner = ({ image, texte }) => {
+const Banner = ({ image, texte, isMobileAbout }) => {
+  const bannerStyle = {
+    height: isMobileAbout ? '225px' : '225' 
+  };
+
   return (
     <div className="banner">
-      <div className="banner__image">
+      <div className="banner__image" style={bannerStyle}>
         <div className="banner__gradient"></div>
         <img src={image} alt="Bannière de la page" />
       </div>

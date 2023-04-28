@@ -29,7 +29,7 @@ const aboutData = [
 
 const About = () => (
   <>
-    <Banner image={bannerAbout} />
+    <Banner image={bannerAbout} isMobileAbout={true} />
     <div className="about__container">
       {aboutData.map((data) => (
         <Dropdown key={data.title} title={data.title} content={data.content} />
